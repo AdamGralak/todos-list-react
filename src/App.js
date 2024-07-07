@@ -8,12 +8,15 @@ import Section from './Section';
 import Header from './Header';
 import Container from './Container';
 
+
+
+
 const tasks = [
   { id: 1, content: "odrobić lekcje", done: true },
   { id: 2, content: "przejść na reacta", done: false },
 ];
 
-let hideTaskDone = false;
+let hideDone = false;
 
 function App() {
   return (
@@ -29,8 +32,8 @@ function App() {
 
       <Section
         title="Lista zadań"
-        extraHeaderContent={<Buttons tasks={tasks} hideTaskDone={hideTaskDone} />}
-        body={<Tasks tasks={tasks} hideTaskDone={hideTaskDone} />}
+        extraHeaderContent={<Buttons tasks={tasks} hideDone={hideDone} />}
+        body={<Tasks tasks={tasks} hideDone={hideDone} />}
       />
     </Container>
   );
