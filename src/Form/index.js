@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { StyledForm, StyledInput, StyledDiv, StyledButton } from './styled';
 
 const Form = ({ addNewTask }) => {
 
@@ -21,21 +22,20 @@ const Form = ({ addNewTask }) => {
   }
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
+    <StyledForm onSubmit={onFormSubmit}>
       <div>
-        <input
+        <StyledInput
           value={newTaskContent}
-          className="form__input"
           ref={inputFocus}
           type="text"
           placeholder="Co jest do zrobienia?"
           onChange={(e) => setNewtaskContent(e.target.value)}
         />
       </div>
-      <div className="form__addTask">
-        <button onClick = {onButtonClick} className="form__button">Dodaj zadanie</button>
-      </div>
-    </form>
+      <StyledDiv>
+        <StyledButton onClick = {onButtonClick}>Dodaj zadanie</StyledButton>
+      </StyledDiv>
+    </StyledForm>
   )
 };
 

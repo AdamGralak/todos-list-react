@@ -1,20 +1,22 @@
 import React from 'react';
+import { StyledOptionButton, StyledDiv } from './styled';
 
-const Buttons = ({ tasks, hideDone, toggleHideDone,setAllDone }) => {
+const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => {
     if (tasks.length !== 0) {
         return (
-            <div className="section_Buttons">
-                <button 
-                className="section__optionButton" 
-                onClick={setAllDone}
-                disabled={tasks.every(({ done }) => done)}>Ukończ wszystkie
-                </button>
-                <button
+            <StyledDiv>
+                <StyledOptionButton
+                    onClick={setAllDone}
+                    disabled={tasks.every(({ done }) => done)}
+                >
+                    Ukończ wszystkie
+                </StyledOptionButton>
+                <StyledOptionButton
                     onClick={toggleHideDone}
-                    className="section__optionButton">
+                >
                     {hideDone ? "Wyświetl ukończone" : "Ukryj ukończone"}
-                </button>
-            </div>
+                </StyledOptionButton>
+            </StyledDiv>
         );
     } else {
         return null;
