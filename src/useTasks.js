@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 const useTasks = () => {
   const tasksFromLocalStorage = localStorage.getItem("tasks");
 
-  const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState(
     tasksFromLocalStorage ? JSON.parse(tasksFromLocalStorage) : []
   );
@@ -11,10 +10,6 @@ const useTasks = () => {
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
-
-  const toggleHideDone = () => {
-    setHideDone((hideDone) => !hideDone);
-  };
 
   const removeTask = (id) => {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
@@ -52,9 +47,6 @@ const useTasks = () => {
   };
 
   return {
-    tasks,
-    hideDone,
-    toggleHideDone,
     removeTask,
     toggleTaskDone,
     setAllDone,
