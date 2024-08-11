@@ -21,7 +21,7 @@ export const TaskContent = styled.span`
     word-break: break-word;
     padding: 0px 20px;
 
-    ${({ done }) => done && css`
+    ${({ isdone }) => isdone === "true" && css`
         text-decoration: line-through;
     `}
 `;

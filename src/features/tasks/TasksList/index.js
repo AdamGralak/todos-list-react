@@ -13,13 +13,13 @@ const TasksList = ({ tasks, removeTask, hideDone, toggleTaskDone }) => (
                 >
                     {task.done ? "✓" : ""}
                 </StyledButton>
-                <TaskContent done={task.done}>
+                <TaskContent isdone={task.done ? "true" : "false"}>
                     {task.content}
                 </TaskContent>
                 <StyledButton remove="true" onClick={() => removeTask(task.id)} className="task__delete">🗑️</StyledButton>
             </Item>
         ))}
     </List>
-)
+);
 
 export default TasksList;
