@@ -6,7 +6,7 @@ export const StyledOptionButton = styled.button`
     border: none;
     background-color: #fff;
     color: teal;
-    font-size: 16px;
+    font-size: 14px;
     transition: 0.5s;
     cursor: pointer;
     
@@ -19,9 +19,20 @@ export const StyledOptionButton = styled.button`
         transition: none;
         pointer-events: none; // Dodanie tego, aby uniemożliwić interakcje
     `}
+    
+    @media (max-width: 767px){
+        margin-left: 0;
+        font-size: 16px;
+        padding: 8px;
+    }
 `;
 
 export const StyledDiv = styled.div`
     padding: 10px;
-    display: inline;
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 767px){
+        flex-direction: column;
+    }
 `;

@@ -9,7 +9,7 @@ export const StyledSectionHeader = styled.div`
     border-bottom: solid 2px #efefef;
     margin-block: 0px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
 
     @media (max-width: 767px) 
     {
