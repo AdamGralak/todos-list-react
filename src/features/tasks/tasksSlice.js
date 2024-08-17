@@ -4,7 +4,7 @@ import { getLocalStorageTasks } from './updateLocalStorage';
 const tasksSlice = createSlice({
     name: 'tasks',
     initialState: {
-        tasks: getLocalStorageTasks() || [],
+        tasks: getLocalStorageTasks(),
         hideDone: false,
     },
     reducers: {
