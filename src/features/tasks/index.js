@@ -1,10 +1,11 @@
 import React from 'react';
-import Form from './Form';
-import TasksList from './TasksList';
-import Buttons from './Buttons';
+import Form from './TasksPage/Form'
+import TasksList from './TasksPage/TasksList';
+import Buttons from './TasksPage/Buttons';
 import Section from '../../common/Section';
 import Header from '../../common/Header';
 import Container from '../../common/Container';
+import GetExampleTasksButton from './TasksPage/GetExampleTasksButton';
 import { GlobalStyle } from '../../global.styled';
 
 function Tasks() {
@@ -16,6 +17,7 @@ function Tasks() {
         <Section
           title="Dodaj nowe zadanie"
           body={<Form/>}
+          extraHeaderContent={<GetExampleTasksButton/>}
         />
         <Section
           title="Lista zadań"
