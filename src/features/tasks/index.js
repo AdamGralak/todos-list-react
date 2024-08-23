@@ -7,6 +7,7 @@ import Header from '../../common/Header';
 import Container from '../../common/Container';
 import GetExampleTasksButton from './TasksPage/GetExampleTasksButton';
 import { GlobalStyle } from '../../global.styled';
+import SearchTasks from './TasksPage/SearchTasks';
 
 function Tasks() {
   return (
@@ -18,6 +19,10 @@ function Tasks() {
           title="Dodaj nowe zadanie"
           body={<Form/>}
           extraHeaderContent={<GetExampleTasksButton/>}
+        />
+        <Section
+          title="Wyszukaj zadania"
+          body={<SearchTasks/>}
         />
         <Section
           title="Lista zadań"

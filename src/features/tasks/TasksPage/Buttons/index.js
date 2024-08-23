@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { StyledDiv, StyledOptionButton } from '../../styled';
-import { selectTasks, selectTasksStatus, toggleHideDone, setAllDone, fetchExampleTasks } from '../../tasksSlice';
+import { selectTasks, selectTasksStatus, toggleHideDone, setAllDone} from '../../tasksSlice';
 
 const Buttons = () => {
     const { tasks } = useSelector(selectTasks);
@@ -21,14 +21,6 @@ const Buttons = () => {
                     onClick={() => dispatch(toggleHideDone())}
                 >
                     {hideDone ? "Wyświetl ukończone" : "Ukryj ukończone"}
-                </StyledOptionButton>
-            </StyledDiv>
-        );
-    } else {
-        return (
-            <StyledDiv>
-                <StyledOptionButton onClick={() => dispatch(fetchExampleTasks())}>
-                    Pobierz przykładowe zadania
                 </StyledOptionButton>
             </StyledDiv>
         );
