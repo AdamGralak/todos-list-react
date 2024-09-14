@@ -14,5 +14,6 @@
 - **React Hooks:** Utilizes hooks like `useNavigate` and `useLocation` for navigation to the task details page and for location tracking.
 - **Local Storage:** Saves tasks to `localStorage` to persist data across page refreshes.
 - **Sample Tasks:** Fetches a list of sample tasks using `async/await`.
+- **Styled Components:** Uses Styled Components for custom styling of the application.
  
 Feel free to check it out at: https://adamgralak.github.io/todos-list-react/
